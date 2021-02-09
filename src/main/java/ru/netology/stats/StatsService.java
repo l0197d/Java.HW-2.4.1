@@ -68,10 +68,5 @@ public class StatsService {
         return sumMont;
 
     }
-
-
-
-
-
 }
 
