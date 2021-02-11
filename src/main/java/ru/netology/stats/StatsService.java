@@ -11,19 +11,20 @@ public class StatsService {
 
     public float averageAmountofSales(long[] sales) {
 
-            float average = sumArray(sales)/sales.length;
+        float average = sumArray(sales) / sales.length;
 
         return average;
 
     }
-    public long peakSales(long[] sales){
+
+    public long peakSales(long[] sales) {
         int mont = 0;
-        int n=0;
+        int n = 0;
         long currentMax = sales[0];
         for (long sale : sales) {
-            if (currentMax <= sale){
+            if (currentMax <= sale) {
                 currentMax = sale;
-                n=mont;
+                n = mont;
             }
             mont++;
         }
@@ -31,14 +32,15 @@ public class StatsService {
         return n;
 
     }
-    public long declineSales(long[] sales){
+
+    public long declineSales(long[] sales) {
         int mont = 0;
-        int n=0;
+        int n = 0;
         long currentMin = sales[0];
         for (long sale : sales) {
-            if (currentMin > sale){
+            if (currentMin > sale) {
                 currentMin = sale;
-                n=mont;
+                n = mont;
             }
             mont++;
         }
@@ -46,22 +48,24 @@ public class StatsService {
         return n;
 
     }
-    public long belowAverage(long[] sales){
+
+    public long belowAverage(long[] sales) {
         int sumMont = 0;
-        float arithmeticMean = sumArray(sales)/sales.length;
+        float arithmeticMean = sumArray(sales) / sales.length;
         for (long sale : sales) {
-            if (arithmeticMean > sale){
+            if (arithmeticMean > sale) {
                 sumMont++;
             }
         }
         return sumMont;
 
     }
-    public long aboveAverage(long[] sales){
+
+    public long aboveAverage(long[] sales) {
         int sumMont = 0;
-        float arithmeticMean = sumArray(sales)/sales.length;
+        float arithmeticMean = sumArray(sales) / sales.length;
         for (long sale : sales) {
-            if (arithmeticMean < sale){
+            if (arithmeticMean < sale) {
                 sumMont++;
             }
         }
